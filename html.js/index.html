@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Meta tags para configuración básica del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Qué es HTML? - Lenguaje de Marcado</title>
+    
+    <!-- Enlace al archivo CSS externo para los estilos -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Contenedor principal de la página -->
+    <div class="container">
+        
+        <!-- Encabezado principal -->
+        <header class="header">
+            <h1>🌐 ¿Qué es HTML?</h1>
+            <p class="subtitle">Descubre la diferencia entre lenguajes de programación y lenguajes de marcado</p>
+        </header>
+
+        <!-- Sección de explicación principal -->
+        <section class="explanation">
+            <div class="card">
+                <h2>📝 HTML NO es un lenguaje de programación</h2>
+                <p><strong>HTML</strong> significa <em>HyperText Markup Language</em> (Lenguaje de Marcado de Hipertexto).</p>
+                
+                <div class="info-box">
+                    <h3>¿Qué es un lenguaje de marcado?</h3>
+                    <p>Un lenguaje de marcado es un sistema de anotaciones que se puede leer tanto por humanos como por máquinas. 
+                    Se utiliza para estructurar y presentar contenido, <strong>NO para crear lógica o algoritmos</strong>.</p>
+                </div>
+
+                <div class="comparison">
+                    <div class="comparison-item">
+                        <h4>❌ Lo que HTML NO hace:</h4>
+                        <ul>
+                            <li>No ejecuta cálculos matemáticos</li>
+                            <li>No toma decisiones (if/else)</li>
+                            <li>No maneja bucles (for/while)</li>
+                            <li>No almacena variables</li>
+                            <li>No crea funciones</li>
+                        </ul>
+                    </div>
+                    <div class="comparison-item">
+                        <h4>✅ Lo que HTML SÍ hace:</h4>
+                        <ul>
+                            <li>Estructura el contenido</li>
+                            <li>Define títulos, párrafos, listas</li>
+                            <li>Organiza la información</li>
+                            <li>Conecta páginas web (enlaces)</li>
+                            <li>Integra multimedia</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de estructura mínima -->
+        <section class="structure">
+            <div class="card">
+                <h2>🏗️ Estructura Mínima de HTML</h2>
+                <p>Toda página HTML necesita estos elementos básicos:</p>
+                
+                <div class="code-example">
+                    <h4>Código de ejemplo:</h4>
+                    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Mi página&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hola Mundo&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
+
+                <div class="structure-explanation">
+                    <div class="element">
+                        <strong>&lt;!DOCTYPE html&gt;</strong> - Declara que es HTML5
+                    </div>
+                    <div class="element">
+                        <strong>&lt;html&gt;</strong> - Elemento raíz del documento
+                    </div>
+                    <div class="element">
+                        <strong>&lt;head&gt;</strong> - Información del documento (no visible)
+                    </div>
+                    <div class="element">
+                        <strong>&lt;body&gt;</strong> - Contenido visible de la página
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de demostración JavaScript -->
+        <section class="demo">
+            <div class="card">
+                <h2>⚡ Demostración: HTML + JavaScript</h2>
+                <p>Ahora vamos a ver cómo HTML puede trabajar con JavaScript para crear interactividad:</p>
+
+                <!-- Div que será modificado por JavaScript externo -->
+                <div id="demo-div" class="demo-box">
+                    <p>Este div será modificado por JavaScript externo</p>
+                </div>
+
+                <!-- Botón que llama a función JavaScript externa -->
+                <button id="external-js-btn" class="btn btn-primary">
+                    🎨 Cambiar contenido y color (JS externo)
+                </button>
+
+                <!-- Botón que ejecuta JavaScript interno -->
+                <button id="internal-js-btn" class="btn btn-secondary">
+                    📊 Click para ver en consola (JS interno)
+                </button>
+
+                <div class="info-box">
+                    <h3>💡 Explicación:</h3>
+                    <ul>
+                        <li><strong>Botón azul:</strong> Ejecuta código desde archivo <code>script.js</code> externo</li>
+                        <li><strong>Botón verde:</strong> Ejecuta código JavaScript directamente en el HTML</li>
+                        <li><strong>Consola:</strong> Abre las herramientas de desarrollador (F12) para ver los mensajes</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pie de página -->
+        <footer class="footer">
+            <p>🎓 Material educativo para estudiantes de programación web</p>
+        </footer>
+    </div>
+
+    <!-- Enlace al archivo JavaScript externo -->
+    <script src="script.js"></script>
+
+    <!-- JavaScript interno para demostrar código embebido -->
+    <script>
+        // ============================================
+        // JAVASCRIPT INTERNO - Código embebido en HTML
+        // ============================================
+        
+        // Variable para contar los clicks
+        let clickCount = 0;
+        
+        // Esperar a que el DOM esté completamente cargado
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // Obtener referencia al botón interno
+            const internalBtn = document.getElementById('internal-js-btn');
+            
+            // Agregar evento click al botón interno
+            internalBtn.addEventListener('click', function() {
+                // Incrementar el contador
+                clickCount++;
+                
+                // Mostrar mensaje en consola
+                console.log('Saludo ' + clickCount);
+                
+                // Cambiar el texto del botón para mostrar el contador
+                this.textContent = `📊 Click para ver en consola (${clickCount})`;
+                
+                // Agregar efecto visual temporal
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 150);
+            });
+        });
+    </script>
+</body>
+</html> 

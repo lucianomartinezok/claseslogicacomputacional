@@ -1,0 +1,505 @@
+/* ============================================
+   ESTILOS CSS PARA PÁGINA EXPLICATIVA DE HTML
+   ============================================ */
+
+/* Importar fuentes de Google Fonts para mejor tipografía */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ============================================
+   RESET Y CONFIGURACIÓN BASE
+   ============================================ */
+
+/* Reset básico para eliminar márgenes y padding por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configuración del elemento raíz para variables CSS */
+:root {
+    /* Paleta de colores principal */
+    --primary-color: #2563eb;
+    --primary-dark: #1d4ed8;
+    --secondary-color: #10b981;
+    --secondary-dark: #059669;
+    --accent-color: #f59e0b;
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
+    --background: #f8fafc;
+    --card-bg: #ffffff;
+    --border-color: #e5e7eb;
+    
+    /* Sombras */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    
+    /* Transiciones */
+    --transition: all 0.3s ease;
+}
+
+/* ============================================
+   ESTILOS DEL BODY Y HTML
+   ============================================ */
+
+/* Configuración del body */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* ============================================
+   CONTENEDOR PRINCIPAL
+   ============================================ */
+
+/* Contenedor principal con ancho máximo y centrado */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--background);
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+}
+
+/* ============================================
+   ENCABEZADO
+   ============================================ */
+
+/* Estilos del header principal */
+.header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: white;
+    text-align: center;
+    padding: 60px 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto de fondo decorativo */
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+}
+
+/* Título principal */
+.header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Subtítulo */
+.subtitle {
+    font-size: 1.25rem;
+    font-weight: 400;
+    opacity: 0.9;
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================
+   SECCIONES Y TARJETAS
+   ============================================ */
+
+/* Contenedor de secciones */
+.explanation,
+.structure,
+.demo {
+    padding: 40px;
+}
+
+/* Estilos de las tarjetas */
+.card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+    margin-bottom: 32px;
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Títulos de sección */
+.card h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+}
+
+.card h4 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+/* Párrafos */
+.card p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+/* ============================================
+   CAJAS DE INFORMACIÓN
+   ============================================ */
+
+/* Caja de información destacada */
+.info-box {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border: 1px solid #bae6fd;
+    border-radius: 12px;
+    padding: 24px;
+    margin: 24px 0;
+}
+
+.info-box h3 {
+    color: var(--primary-color);
+    margin-bottom: 12px;
+}
+
+.info-box p {
+    color: var(--text-primary);
+    margin-bottom: 0;
+}
+
+/* ============================================
+   COMPARACIÓN
+   ============================================ */
+
+/* Contenedor de comparación */
+.comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin: 24px 0;
+}
+
+/* Elementos de comparación */
+.comparison-item {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid var(--border-color);
+}
+
+.comparison-item h4 {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Listas */
+.comparison-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.comparison-item li {
+    padding: 8px 0;
+    padding-left: 24px;
+    position: relative;
+    color: var(--text-secondary);
+}
+
+.comparison-item li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* ============================================
+   EJEMPLO DE CÓDIGO
+   ============================================ */
+
+/* Contenedor del ejemplo de código */
+.code-example {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 24px;
+    margin: 24px 0;
+    overflow-x: auto;
+}
+
+.code-example h4 {
+    color: #e2e8f0;
+    margin-bottom: 16px;
+}
+
+/* Código preformateado */
+.code-example pre {
+    margin: 0;
+}
+
+.code-example code {
+    color: #e2e8f0;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* ============================================
+   EXPLICACIÓN DE ESTRUCTURA
+   ============================================ */
+
+/* Contenedor de explicación de estructura */
+.structure-explanation {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+}
+
+/* Elementos de estructura */
+.element {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.element:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+.element strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* ============================================
+   DEMOSTRACIÓN
+   ============================================ */
+
+/* Caja de demostración */
+.demo-box {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border: 2px solid var(--accent-color);
+    border-radius: 12px;
+    padding: 24px;
+    margin: 24px 0;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.demo-box p {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    margin: 0;
+    font-weight: 500;
+}
+
+/* ============================================
+   BOTONES
+   ============================================ */
+
+/* Estilos base de botones */
+.btn {
+    display: inline-block;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+    margin: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Botón primario (azul) */
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: white;
+    box-shadow: var(--shadow-md);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    background: linear-gradient(135deg, var(--primary-dark) 0%, #1e40af 100%);
+}
+
+/* Botón secundario (verde) */
+.btn-secondary {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--secondary-dark) 100%);
+    color: white;
+    box-shadow: var(--shadow-md);
+}
+
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    background: linear-gradient(135deg, var(--secondary-dark) 0%, #047857 100%);
+}
+
+/* Efecto de presión en botones */
+.btn:active {
+    transform: translateY(0);
+}
+
+/* ============================================
+   PIE DE PÁGINA
+   ============================================ */
+
+/* Estilos del footer */
+.footer {
+    background: linear-gradient(135deg, #374151 0%, #1f2937 100%);
+    color: white;
+    text-align: center;
+    padding: 32px;
+    margin-top: 40px;
+}
+
+.footer p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin: 0;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+    /* Ajustar padding del body */
+    body {
+        padding: 10px;
+    }
+    
+    /* Ajustar padding de secciones */
+    .explanation,
+    .structure,
+    .demo {
+        padding: 20px;
+    }
+    
+    /* Ajustar título principal */
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    /* Ajustar subtítulo */
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    /* Cambiar grid de comparación a columna única */
+    .comparison {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Ajustar estructura de explicación */
+    .structure-explanation {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Ajustar padding de tarjetas */
+    .card {
+        padding: 20px;
+    }
+    
+    /* Ajustar tamaño de botones */
+    .btn {
+        padding: 12px 24px;
+        font-size: 1rem;
+        width: 100%;
+        margin: 4px 0;
+    }
+}
+
+/* Media queries para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    /* Ajustar padding del header */
+    .header {
+        padding: 40px 20px;
+    }
+    
+    /* Ajustar título principal */
+    .header h1 {
+        font-size: 1.75rem;
+    }
+    
+    /* Ajustar títulos de tarjetas */
+    .card h2 {
+        font-size: 1.5rem;
+    }
+    
+    /* Ajustar padding de tarjetas */
+    .card {
+        padding: 16px;
+    }
+}
+
+/* ============================================
+   ANIMACIONES Y EFECTOS
+   ============================================ */
+
+/* Animación de entrada para las tarjetas */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Efecto de hover para elementos interactivos */
+.info-box:hover,
+.comparison-item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Transición suave para todos los elementos */
+* {
+    transition: var(--transition);
+} 
