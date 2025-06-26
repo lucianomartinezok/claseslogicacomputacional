@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores de JavaScript - Guía Completa</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Botón para ocultar/mostrar sidebar -->
+    <button id="sidebar-toggle" class="sidebar-toggle">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <!-- Sidebar -->
+    <nav id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <h2>Operadores JS</h2>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="#introduccion" class="sidebar-link">Introducción</a></li>
+            <li><a href="#tipos-operadores" class="sidebar-link">Tipos de Operadores</a></li>
+            <li><a href="#aritmeticos" class="sidebar-link">Operadores Aritméticos</a></li>
+            <li><a href="#asignacion" class="sidebar-link">Operadores de Asignación</a></li>
+            <li><a href="#comparacion" class="sidebar-link">Operadores de Comparación</a></li>
+            <li><a href="#cadenas" class="sidebar-link">Operadores de Cadenas</a></li>
+            <li><a href="#logicos" class="sidebar-link">Operadores Lógicos</a></li>
+            <li><a href="#tipo" class="sidebar-link">Operadores de Tipo</a></li>
+            <li><a href="#bitwise" class="sidebar-link">Operadores Bitwise</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main id="main-content" class="main-content">
+        <div class="container">
+            <!-- Introducción -->
+            <section id="introduccion" class="section">
+                <h1>Operadores de JavaScript</h1>
+                <p>Los operadores de JavaScript son símbolos especiales que realizan operaciones en operandos (valores y variables).</p>
+                
+                <div class="example-box">
+                    <h3>Ejemplo Básico</h3>
+                    <div class="code-block">
+                        <pre><code>// Asignar el valor 5 a x
+let x = 5;
+// Asignar el valor 2 a y
+let y = 2;
+// Asignar el valor x + y a z:
+let z = x + y;</code></pre>
+                    </div>
+                </div>
+
+                <div class="example-box">
+                    <h3>Suma en JavaScript</h3>
+                    <p>El <strong>Operador de Suma</strong> (<code>+</code>) suma números:</p>
+                    <div class="code-block">
+                        <pre><code>let x = 5;
+let y = 2;
+let z = x + y;</code></pre>
+                    </div>
+                </div>
+
+                <div class="example-box">
+                    <h3>Multiplicación en JavaScript</h3>
+                    <p>El <strong>Operador de Multiplicación</strong> (<code>*</code>) multiplica números:</p>
+                    <div class="code-block">
+                        <pre><code>let x = 5;
+let y = 2;
+let z = x * y;</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tipos de Operadores -->
+            <section id="tipos-operadores" class="section">
+                <h2>Tipos de Operadores de JavaScript</h2>
+                <p>Existen diferentes tipos de operadores en JavaScript:</p>
+                <ul class="operator-list">
+                    <li><a href="#aritmeticos" class="operator-link">Operadores Aritméticos</a></li>
+                    <li><a href="#asignacion" class="operator-link">Operadores de Asignación</a></li>
+                    <li><a href="#comparacion" class="operator-link">Operadores de Comparación</a></li>
+                    <li><a href="#cadenas" class="operator-link">Operadores de Cadenas</a></li>
+                    <li><a href="#logicos" class="operator-link">Operadores Lógicos</a></li>
+                    <li><a href="#bitwise" class="operator-link">Operadores Bitwise</a></li>
+                    <li><a href="#tipos-operadores-ternario" class="operator-link">Operadores Ternarios</a></li>
+                    <li><a href="#tipo" class="operator-link">Operadores de Tipo</a></li>
+                </ul>
+            </section>
+
+            <!-- Operadores Aritméticos -->
+            <section id="aritmeticos" class="section">
+                <h2>Operadores Aritméticos de JavaScript</h2>
+                <p>Los <strong>Operadores Aritméticos</strong> se utilizan para realizar operaciones aritméticas en números:</p>
+                
+                <div class="example-box">
+                    <h3>Ejemplo de Operadores Aritméticos</h3>
+                    <div class="code-block">
+                        <pre><code>let a = 3;
+let x = (100 + 50) * a;</code></pre>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <table class="operator-table">
+                        <thead>
+                            <tr>
+                                <th>Operador</th>
+                                <th>Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>+</code></td>
+                                <td>Suma</td>
+                            </tr>
+                            <tr>
+                                <td><code>-</code></td>
+                                <td>Resta</td>
+                            </tr>
+                            <tr>
+                                <td><code>*</code></td>
+                                <td>Multiplicación</td>
+                            </tr>
+                            <tr>
+                                <td><code>**</code></td>
+                                <td>Exponenciación (ES2016)</td>
+                            </tr>
+                            <tr>
+                                <td><code>/</code></td>
+                                <td>División</td>
+                            </tr>
+                            <tr>
+                                <td><code>%</code></td>
+                                <td>Módulo (Resto de División)</td>
+                            </tr>
+                            <tr>
+                                <td><code>++</code></td>
+                                <td>Incremento</td>
+                            </tr>
+                            <tr>
+                                <td><code>--</code></td>
+                                <td>Decremento</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Operadores de Asignación -->
+            <section id="asignacion" class="section">
+                <h2>Operadores de Asignación de JavaScript</h2>
+                <p>Los operadores de asignación asignan valores a variables de JavaScript.</p>
+                <p>El <strong>Operador de Asignación de Suma</strong> (<code>+=</code>) suma un valor a una variable.</p>
+                
+                <div class="example-box">
+                    <h3>Asignación</h3>
+                    <div class="code-block">
+                        <pre><code>let x = 10;
+x += 5;</code></pre>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <table class="operator-table">
+                        <thead>
+                            <tr>
+                                <th>Operador</th>
+                                <th>Ejemplo</th>
+                                <th>Igual a</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>=</code></td>
+                                <td><code>x = y</code></td>
+                                <td><code>x = y</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>+=</code></td>
+                                <td><code>x += y</code></td>
+                                <td><code>x = x + y</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>-=</code></td>
+                                <td><code>x -= y</code></td>
+                                <td><code>x = x - y</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>*=</code></td>
+                                <td><code>x *= y</code></td>
+                                <td><code>x = x * y</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>/=</code></td>
+                                <td><code>x /= y</code></td>
+                                <td><code>x = x / y</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>%=</code></td>
+                                <td><code>x %= y</code></td>
+                                <td><code>x = x % y</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>**=</code></td>
+                                <td><code>x **= y</code></td>
+                                <td><code>x = x ** y</code></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Operadores de Comparación -->
+            <section id="comparacion" class="section">
+                <h2>Operadores de Comparación de JavaScript</h2>
+                <div class="table-container">
+                    <table class="operator-table">
+                        <thead>
+                            <tr>
+                                <th>Operador</th>
+                                <th>Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>==</code></td>
+                                <td>igual a</td>
+                            </tr>
+                            <tr>
+                                <td><code>===</code></td>
+                                <td>igual valor e igual tipo</td>
+                            </tr>
+                            <tr>
+                                <td><code>!=</code></td>
+                                <td>no igual</td>
+                            </tr>
+                            <tr>
+                                <td><code>!==</code></td>
+                                <td>no igual valor o no igual tipo</td>
+                            </tr>
+                            <tr>
+                                <td><code>></code></td>
+                                <td>mayor que</td>
+                            </tr>
+                            <tr>
+                                <td><code><</code></td>
+                                <td>menor que</td>
+                            </tr>
+                            <tr>
+                                <td><code>>=</code></td>
+                                <td>mayor o igual que</td>
+                            </tr>
+                            <tr>
+                                <td><code><=</code></td>
+                                <td>menor o igual que</td>
+                            </tr>
+                            <tr>
+                                <td><code>?</code></td>
+                                <td>operador ternario</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Operadores de Cadenas -->
+            <section id="cadenas" class="section">
+                <h2>Comparación de Cadenas en JavaScript</h2>
+                <p>Todos los operadores de comparación anteriores también se pueden usar en cadenas:</p>
+                
+                <div class="example-box">
+                    <h3>Ejemplo</h3>
+                    <div class="code-block">
+                        <pre><code>let text1 = "A";
+let text2 = "B";
+let result = text1 < text2;</code></pre>
+                    </div>
+                </div>
+
+                <p>Ten en cuenta que las cadenas se comparan alfabéticamente:</p>
+                
+                <div class="example-box">
+                    <h3>Ejemplo</h3>
+                    <div class="code-block">
+                        <pre><code>let text1 = "20";
+let text2 = "5";
+let result = text1 < text2;</code></pre>
+                    </div>
+                </div>
+
+                <h3>Suma de Cadenas en JavaScript</h3>
+                <p>El <code>+</code> también se puede usar para sumar (concatenar) cadenas:</p>
+                
+                <div class="example-box">
+                    <h3>Ejemplo</h3>
+                    <div class="code-block">
+                        <pre><code>let text1 = "John";
+let text2 = "Doe";
+let text3 = text1 + " " + text2;</code></pre>
+                    </div>
+                </div>
+
+                <p>El operador de asignación <code>+=</code> también se puede usar para sumar (concatenar) cadenas:</p>
+                
+                <div class="example-box">
+                    <h3>Ejemplo</h3>
+                    <div class="code-block">
+                        <pre><code>let text1 = "Qué día tan ";
+text1 += "agradable";</code></pre>
+                    </div>
+                </div>
+
+                <p>El resultado de text1 será:</p>
+                <div class="output-box">
+                    <code>Qué día tan agradable</code>
+                </div>
+
+                <h3>Sumar Cadenas y Números</h3>
+                <p>Sumar dos números devolverá la suma como un número, como 5 + 5 = 10.</p>
+                <p>Sumar un número y una cadena devolverá la suma como una cadena concatenada, como 5 + "5" = "55".</p>
+                
+                <div class="example-box">
+                    <h3>Ejemplo</h3>
+                    <div class="code-block">
+                        <pre><code>let x = 5 + 5;
+let y = "5" + 5;
+let z = "Hola" + 5;</code></pre>
+                    </div>
+                </div>
+
+                <p>El resultado de <em>x</em>, <em>y</em>, y <em>z</em> será:</p>
+                <div class="output-box">
+                    <code>10<br>55<br>Hola5</code>
+                </div>
+            </section>
+
+            <!-- Operadores Lógicos -->
+            <section id="logicos" class="section">
+                <h2>Operadores Lógicos de JavaScript</h2>
+                <div class="table-container">
+                    <table class="operator-table">
+                        <thead>
+                            <tr>
+                                <th>Operador</th>
+                                <th>Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>&&</code></td>
+                                <td>lógico y</td>
+                            </tr>
+                            <tr>
+                                <td><code>||</code></td>
+                                <td>lógico o</td>
+                            </tr>
+                            <tr>
+                                <td><code>!</code></td>
+                                <td>lógico no</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Operadores de Tipo -->
+            <section id="tipo" class="section">
+                <h2>Operadores de Tipo de JavaScript</h2>
+                <div class="table-container">
+                    <table class="operator-table">
+                        <thead>
+                            <tr>
+                                <th>Operador</th>
+                                <th>Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>typeof</code></td>
+                                <td>Devuelve el tipo de una variable</td>
+                            </tr>
+                            <tr>
+                                <td><code>instanceof</code></td>
+                                <td>Devuelve true si un objeto es una instancia de un tipo de objeto</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Operadores Bitwise -->
+            <section id="bitwise" class="section">
+                <h2>Operadores Bitwise de JavaScript</h2>
+                <p>Los operadores bitwise trabajan en números de 32 bits.</p>
+                <p>Cualquier operando numérico en la operación se convierte en un número de 32 bits. El resultado se convierte de vuelta a un número de JavaScript.</p>
+                
+                <div class="table-container">
+                    <table class="operator-table">
+                        <thead>
+                            <tr>
+                                <th>Operador</th>
+                                <th>Descripción</th>
+                                <th>Ejemplo</th>
+                                <th>Igual a</th>
+                                <th>Resultado</th>
+                                <th>Decimal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>&</code></td>
+                                <td>AND</td>
+                                <td><code>5 & 1</code></td>
+                                <td><code>0101 & 0001</code></td>
+                                <td><code>0001</code></td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td><code>|</code></td>
+                                <td>OR</td>
+                                <td><code>5 | 1</code></td>
+                                <td><code>0101 | 0001</code></td>
+                                <td><code>0101</code></td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td><code>~</code></td>
+                                <td>NOT</td>
+                                <td><code>~ 5</code></td>
+                                <td><code>~0101</code></td>
+                                <td><code>1010</code></td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td><code>^</code></td>
+                                <td>XOR</td>
+                                <td><code>5 ^ 1</code></td>
+                                <td><code>0101 ^ 0001</code></td>
+                                <td><code>0100</code></td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td><code><<</code></td>
+                                <td>desplazamiento izquierda</td>
+                                <td><code>5 << 1</code></td>
+                                <td><code>0101 << 1</code></td>
+                                <td><code>1010</code></td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td><code>>></code></td>
+                                <td>desplazamiento derecha</td>
+                                <td><code>5 >> 1</code></td>
+                                <td><code>0101 >> 1</code></td>
+                                <td><code>0010</code></td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td><code>>>></code></td>
+                                <td>desplazamiento derecha sin signo</td>
+                                <td><code>5 >>> 1</code></td>
+                                <td><code>0101 >>> 1</code></td>
+                                <td><code>0010</code></td>
+                                <td>2</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="note-box">
+                    <p><strong>Nota:</strong> Los ejemplos anteriores usan ejemplos de 4 bits sin signo. Pero JavaScript usa números con signo de 32 bits. Debido a esto, en JavaScript, ~ 5 no devolverá 10. Devolverá -6.</p>
+                </div>
+            </section>
+
+            <!-- Operadores Ternarios -->
+            <section id="tipos-operadores-ternario" class="section">
+                <h2>Operadores Ternarios de JavaScript</h2>
+                <p>El operador ternario es una forma abreviada de la estructura condicional <code>if</code>. Su sintaxis es <code>condición ? valorSiVerdadero : valorSiFalso</code>.</p>
+                <div class="example-box">
+                    <h3>Ejemplo</h3>
+                    <div class="code-block">
+                        <pre><code>let edad = 18;
+let mensaje = (edad >= 18) ? "Mayor de edad" : "Menor de edad";
+// mensaje será "Mayor de edad"</code></pre>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html> 
